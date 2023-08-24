@@ -1,7 +1,6 @@
 create table event_queue
 (
-    id                       bigserial
-        primary key,
+    id                       bigserial                     primary key,
     event_type               text                          not null,
     status                   text                          not null,
     prereqs                  bigint[]                      not null,

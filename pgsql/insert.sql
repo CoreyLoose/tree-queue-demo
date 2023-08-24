@@ -11,6 +11,6 @@ SELECT :eventType as event_type,
        :actsOn as acts_on,
        COALESCE(array_agg(id), '{}') as prereqs
 FROM event_queue
-WHERE status IN ('WAITING', 'PROCESSING', 'POST_PROCESSING')
+WHERE status IN ('WAITING', 'PROCESSING', 'POSTPROCESSING')
   AND acts_on && :actsOn
 
